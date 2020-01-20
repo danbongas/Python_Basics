@@ -19,14 +19,21 @@ class UserRegistration:
    def __init__(self, First_name,Last_name,Full_name,Email):
        self.First_name = First_name
        self.Last_name = Last_name
-       self.Full_name = Full_name
+       self.Full_name = First_name +" "+ Last_name
        self.Email = Email  
        UserRegistration.userCount += 1
+       self.users = []
+              
+
   
    
-   def ShowListofUsers(self):
+   def ShowUser(self):
    	    print("Name: ", self.Full_name)
    	    print("Email: ", self.Email)
+
+   def ShowListofUsers(self):
+        for i in self.users:
+            print(i)    
 
    def ShowCount(self):
         print("Total Users : %d" % UserRegistration.userCount)    
@@ -38,9 +45,9 @@ class UserRegistration:
   
 
 user1 = UserRegistration("Richardo","Milo", "Richardo Milo", "richardomilo@gmail.com")
-user1.ShowListofUsers() 
+user1.ShowUser() 
 user2 = UserRegistration("Norman","Reedus", "Norman Reedus", "normanreedus@gmail.com")
-user2.ShowListofUsers() 
+user2.ShowUser() 
 print("Total Users : %d" % UserRegistration.userCount)
 main()
 
