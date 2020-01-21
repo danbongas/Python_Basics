@@ -10,7 +10,9 @@ class UserRegistration:
        self.Last_name = Last_name
        self.Full_name = First_name +" "+ Last_name
        self.Email = Email         
-       UserRegistration.userCount += 1     
+       UserRegistration.userCount += 1 
+
+         
               
 
   
@@ -101,7 +103,11 @@ def RemoveUser():
    user_id = int(input())
    for i in range(len(lst)):
     if i == user_id:
-       print(lst[i])
+       print('-------------')	
+       print(lst[i].Full_name)
+       print('-------------')	
+       del lst[i]            
+        
    print("User Deleted...\n")    
    return main()		
 
